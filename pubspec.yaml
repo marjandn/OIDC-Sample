@@ -23,10 +23,9 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images
-    - assets/fonts
+    - assets/images/
 
   fonts:
     - family: Horley
       fonts:
-        - asset: fonts/Horley-Old.otf
+        - asset: assets/fonts/Horley-Old.otf
