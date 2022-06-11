@@ -1,4 +1,4 @@
-package com.example.oidc
+package dn.marjan.oidcsample
 
 import io.flutter.embedding.android.FlutterActivity
 
