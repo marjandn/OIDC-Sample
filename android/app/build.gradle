@@ -47,8 +47,11 @@ android {
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName,
-        multiDexEnabled true,
+        versionName flutterVersionName
+        multiDexEnabled true
+        manifestPlaceholders = [
+            'appAuthRedirectScheme':'dn.marjan.oidcsample'
+        ]
     }
 
     buildTypes {

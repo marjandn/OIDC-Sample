@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget{
         fontFamily: 'Horley',
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const  LoginScreen(),
+      home:  LoginScreen(),
     );
   }
 }

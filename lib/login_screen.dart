@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/instance_manager.dart';
+import 'package:oidc/login_controller.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+   LoginScreen({Key? key}) : super(key: key);
+
+  final LoginController _controller = Get.put(LoginController());
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +27,7 @@ class LoginScreen extends StatelessWidget {
               Image.asset("assets/images/login_image.jpg",  height: 400,),
               const SizedBox(height: 24,),
               ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => _controller.loginAuth(),
                   style: ElevatedButton.styleFrom(
                     primary: Colors.redAccent,
                     shadowColor: Colors.redAccent,

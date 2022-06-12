@@ -2,7 +2,7 @@
     package="dn.marjan.oidcsample">
    <application
         android:label="oidc"
-        android:name="${applicationName}"
+        android:name="oidc"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
