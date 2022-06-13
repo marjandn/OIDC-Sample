@@ -17,20 +17,25 @@ class LoginController extends GetxController {
     final authoricationTokenRequest = AuthorizationTokenRequest(
         AUTH0_CLIENT_ID, AUTH0_REDIRECT_URI,
         issuer: AUTH0_ISSUER,
-        scopes: ['openid', 'profile', 'email', 'offline_access']);
+        scopes: ['openid', 'profile', 'email', 'offline_access'],
+        promptValues: ['login']);
 
-    final result =
-        await appAuth.authorizeAndExchangeCode(authoricationTokenRequest);
+    try {
+      final result =
+          await appAuth.authorizeAndExchangeCode(authoricationTokenRequest);
 
-    if (result != null) {
-      Auth0IdTokenModel? idTokenModel = _parseToken(result.idToken);
+      if (result != null) {
+        Auth0IdTokenModel? idTokenModel = _parseToken(result.idToken);
 
-      if (idTokenModel != null) {
-        await secureSharedPref.saveTokenData(result);
-        await secureSharedPref.saveUserInfo(idTokenModel);
+        if (idTokenModel != null) {
+          await secureSharedPref.saveTokenData(result);
+          await secureSharedPref.saveUserInfo(idTokenModel);
 
-        Get.to(HomeScreen());
+          Get.off(HomeScreen());
+        }
       }
+    } on Exception catch (error) {
+      print(error);
     }
   }
 

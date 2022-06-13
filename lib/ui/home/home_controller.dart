@@ -1,11 +1,12 @@
 import 'package:get/get.dart';
+import 'package:oidc/ui/login/login_screen.dart';
 
 import '../../storage/secure_shared_pref.dart';
 
 class HomeController extends GetxController{
 
-
   final secureSharedPref = Get.find<SecureSharedPref>();
+
   Rx<String> name="".obs;
   Rx<String> email="".obs;
   Rx<String> picture="".obs;
@@ -20,5 +21,12 @@ class HomeController extends GetxController{
     name(await secureSharedPref.getUserName());
     email(await secureSharedPref.getUserEmail());
     picture(await secureSharedPref.getUsePicture());
+  }
+
+
+  logout() async{
+    secureSharedPref.logout();
+
+    Get.offAll(LoginScreen());
   }
 }

@@ -13,7 +13,7 @@ class SplashController extends GetxController{
   }
 
   checkUserLoggedIn() async{
-    await Future.delayed(const Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 1));
     String? flag = await Get.find<SecureSharedPref>().getRefreshToken();
 
                   Get.off((flag != null)? HomeScreen(): LoginScreen());

@@ -37,4 +37,7 @@ class SecureSharedPref{
     return token;
   }
 
+  logout() async{
+    await storage.deleteAll();
+  }
 }
