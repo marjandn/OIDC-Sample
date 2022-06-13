@@ -77,7 +77,7 @@ class HomeScreen extends StatelessWidget {
                 Obx(() => Text(
                       _controller.name.value,
                       style: const TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.bold),
+                          fontSize: 22, fontWeight: FontWeight.bold),
                     )),
                 const SizedBox(
                   height: 24,
@@ -85,7 +85,7 @@ class HomeScreen extends StatelessWidget {
                 Obx(() => Text(
                       _controller.email.value,
                       style: const TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.bold),
+                          fontSize: 20 ),
                     )),
                 const SizedBox(
                   height: 24,

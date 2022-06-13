@@ -28,6 +28,6 @@ flutter:
     - assets/images/
 
   fonts:
-    - family: Horley
+    - family: Joan
       fonts:
-        - asset: assets/fonts/Horley-Old.otf
+        - asset: assets/fonts/Joan-Regular.ttf

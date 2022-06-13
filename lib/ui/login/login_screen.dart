@@ -43,7 +43,7 @@ class LoginScreen extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 40, vertical: 12),
                       textStyle: const TextStyle(
-                          fontFamily: 'Horley',
+                          fontFamily: 'Joan',
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           fontSize: 16),
