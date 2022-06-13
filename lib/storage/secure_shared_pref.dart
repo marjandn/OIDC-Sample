@@ -32,8 +32,8 @@ class SecureSharedPref{
     return await storage.read(key: USER_PICTURE);
   }
 
-  Future<String> getRefreshToken() async{
-    String token = await storage.read(key: REFRESH_TOKEN) ?? "";
+  Future<String?> getRefreshToken() async{
+    String? token = await storage.read(key: REFRESH_TOKEN);
     return token;
   }
 

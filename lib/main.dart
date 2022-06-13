@@ -5,7 +5,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get/instance_manager.dart';
 import 'package:get/route_manager.dart';
 import 'package:oidc/storage/secure_shared_pref.dart';
-import 'package:oidc/ui/login/login_screen.dart';
+import 'package:oidc/ui/splash/splash_screen.dart';
 
 void main() {
 
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget{
         fontFamily: 'Horley',
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home:  LoginScreen(),
+      home:  SplashScreen(),
     );
   }
 }
