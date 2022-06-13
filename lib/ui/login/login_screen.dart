@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
-import 'package:oidc/login_controller.dart';
+
+import 'login_controller.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);

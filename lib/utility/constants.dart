@@ -6,4 +6,8 @@ const BUNDLE_IDENTIFIER = "dn.marjan.oidcsample";
 const AUTH0_REDIRECT_URI = "$BUNDLE_IDENTIFIER://callback";
 
 
-const TOKEN_STORAGE_KEY = "token_storage_key";
+const REFRESH_TOKEN = "refresh_token";
+const ACCESS_TOKEN = "access_token";
+const USER_NICKNAME = "user_nickname";
+const USER_EMAIL = "user_email";
+const USER_PICTURE = "user_picture";
