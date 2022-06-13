@@ -13,14 +13,14 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
             title: const Text(
-              "OIDC",
+              "OIDC", style: TextStyle(fontWeight: FontWeight.bold),
             ),
             backgroundColor: Colors.red,
             actions: [
               IconButton(
                   onPressed: () => showDialog(
                       context: context,
-                      builder: (_) => AlertDialog(
+                      builder: (_) => CupertinoAlertDialog(
                             content: const Text(
                               "Are you really want to logout?",
                             ),
